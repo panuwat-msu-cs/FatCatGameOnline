@@ -15,20 +15,24 @@ public class Item {
         this.x = x;
         this.y = y;
         this.type = type;
-        this.points = points;
 
         String fish;
 
         if (type == 0) {
             fish = "images/fish_gray.png";
+            this.points = 10;
         } else if (type == 1) {
             fish = "images/fish_cream.png";
+            this.points = 20;
         } else if (type == 2) {
             fish = "images/fish_orange.png";
+            this.points = 30;   
         } else if (type == 3) {
             fish = "images/fish_brown.png";
+            this.points = 50;
         } else {
             fish = "images/bone.png";
+            this.points = 0;
         }
 
         image = new ImageIcon(fish).getImage();
