@@ -53,9 +53,6 @@ public class GameClient extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    // ================= หน้าจอต่าง ๆ =================
-
-    /** พื้นหลัง bg.gif */
     static class BgPanel extends JPanel {
         private final Image bg = new ImageIcon("images/bg.gif").getImage();
         BgPanel() { setLayout(null); }
@@ -65,7 +62,6 @@ public class GameClient extends JFrame {
         }
     }
 
-    /** แผงที่วาดรูปสไลด์เป็นพื้นหลัง */
     static class ImagePanel extends JPanel {
         private final Image img;
         ImagePanel(String path) {
@@ -78,7 +74,6 @@ public class GameClient extends JFrame {
         }
     }
 
-    /** ปุ่มโปร่งใส วางทับปุ่มที่อยู่ในรูป */
     private JButton invisibleButton(int x, int y, int w, int h) {
         JButton b = new JButton();
         b.setBounds(x, y, w, h);
@@ -120,7 +115,6 @@ public class GameClient extends JFrame {
         cards.show(root, "how");
     }
 
-    /** หน้า How to play */
     private JPanel buildHow() {
         ImagePanel p = new ImagePanel("images/how.png");
         JButton next = styledButton("NEXT", 620, 340, 100, 44);
@@ -160,8 +154,7 @@ public class GameClient extends JFrame {
         p.add(resultPanel);
         return p;
     }
-
-    /** หน้า The Winner: ใช้ winner.png แล้ววาดแมว/ชื่อผู้ชนะทับ */
+    
     static class ResultPanel extends JPanel {
         private final Image bg = new ImageIcon("images/winner.png").getImage();
         String winnerName = "";
@@ -189,7 +182,6 @@ public class GameClient extends JFrame {
         }
     }
 
-    // ================= ปุ่มบังคับ =================
 
     private void setupKeys() {
         gamePanel.addKeyListener(new KeyAdapter() {
