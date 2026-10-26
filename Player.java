@@ -7,7 +7,7 @@ public class Player {
     public volatile String name;
 
     public volatile int x = 375;
-    public final int y = 395;
+    public final int y = 315;
 
     public volatile int score = 0;
     public volatile int lives = 9;
