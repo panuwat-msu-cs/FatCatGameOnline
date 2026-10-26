@@ -27,10 +27,8 @@ public class GameClient extends JFrame {
     private int myId = -1;
     private boolean showingResult = false;
 
-    // cache เพื่อไม่ต้องโหลดรูปแมวใหม่ทุกเฟรม
     private final Player[] cache = new Player[5];
 
-    // ปุ่มบังคับ
     private boolean left, right;
     private int lastDir = 0;
 
@@ -207,8 +205,6 @@ public class GameClient extends JFrame {
             send("MOVE|" + dir);
         }
     }
-
-    // ================= Network =================
 
     private void connect() {
         try {
